@@ -112,8 +112,8 @@ RUN ./configure --prefix=/opt/janus \
 
 
 FROM debian:buster-slim
-COPY --from=0 /opt/janus /opt/
-COPY --from=0 /opt/boringssl /opt/
+COPY --from=0 /opt/janus /opt/janus
+COPY --from=0 /opt/boringssl /opt/boringssl
 
 WORKDIR /opt/janus
 ENTRYPOINT ["/opt/janus/bin/janus"]
