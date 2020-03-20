@@ -111,9 +111,9 @@ RUN ./configure --prefix=/opt/janus \
     make && make install && make configs && ldconfig
 
 
-FROM debian:buster-slim
-COPY --from=0 /opt/janus /opt/janus
-COPY --from=0 /opt/boringssl /opt/boringssl
+# FROM debian:buster-slim
+# COPY --from=0 /opt/janus /opt/janus
+# COPY --from=0 /opt/boringssl /opt/boringssl
 
 WORKDIR /opt/janus
 ENTRYPOINT ["/opt/janus/bin/janus"]
