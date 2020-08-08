@@ -21,7 +21,7 @@ RUN make && make install
 
 # libsrtp
 WORKDIR /build
-RUN apt-get remove -y libsrtp0-dev 
+#RUN apt-get remove -y libsrtp0-dev 
 RUN wget https://github.com/cisco/libsrtp/archive/v2.3.0.tar.gz 
 RUN tar xfv v2.3.0.tar.gz
 WORKDIR libsrtp-2.3.0
